@@ -4,7 +4,7 @@ form {
 }
 
 form span {
-    display: block;
+    display: inline;
     width: 80px;
     background: #eee;
     margin: 10px 3px 3px 8px;
