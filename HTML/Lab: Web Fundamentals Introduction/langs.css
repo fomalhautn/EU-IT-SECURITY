@@ -2,5 +2,5 @@ body {
     background:#EEE; font-size:24pt;
   }
   
-p.lang {
-    border:1px #AAA; border-radius: 2px; background: #ccc; padding: 5px;  }
+.lang {
+    border:1px #AAA; border-radius: 10px; background: #ccc; padding: 1px;  }
