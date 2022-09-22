@@ -22,3 +22,25 @@ body {
     padding: 10px;
     margin-top: 1px;
 }
+
+.topnav a.right {
+    float: right;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #FEAE00;
+    color: white;
+}
+
+h1 span.heading-yellow {
+    color: #FEAE00;
+}
+
+main h1 {
+    font-size: 48px;
+}
