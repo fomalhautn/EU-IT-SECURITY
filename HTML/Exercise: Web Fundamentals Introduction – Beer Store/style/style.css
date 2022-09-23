@@ -69,6 +69,7 @@ main th {
 
 main table img {
     width: 100px;
+    height: auto;
 }
 
 main tr:nth-child(odd) {
