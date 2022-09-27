@@ -3,15 +3,145 @@
        <title>JS</title>
     <body>
         <script type="text/javascript">
-            function sum3Numbers(arr) {
-            let num1 = Number(arr[0]);
-            let num2 = Number(arr[1]);
-            let num3 = Number(arr[2]);
-
-            let sum = num1 + num2 + num3;
-            console.log(sum)
+            /*
+            function sum3Numbers(arr)
+            {
+                var sum = 0;
+                for (var i = 0; i < arr.length; i++)
+                {
+                    sum += arr[i];
+                }
+                return sum;
             }
-            sum3Numbers(2, 3, 4);
+            var arr = [2, 3, 4];
+            var sum = sum3Numbers(arr);
+            console.log(sum);
+            */
+
+            /*
+            function calculateSumAndVAT(arr)
+            {
+                let sum = 0;
+
+                for(let price of arr) {
+                sum += Number(price);
+                }
+
+            console.log(`sum = ${sum}`);
+            console.log(`VAT = ${sum * 0.2}`);
+            console.log(`total = ${sum * 1.2}`);
+            }
+            let arr = ['1.20','2.60','3.50']
+            //let arr = ['3.12', '5', '18', '19.24', '1953.2262', '0.001564', '1.1445']
+            calculateSumAndVAT(arr);
+            */
+
+            /*
+            function countLetterInString(arr)
+            {
+                let count = 0;
+                let letter = arr[1];
+                let string = arr[0];
+                for (let i = 0; i < string.length; i++)
+                {
+                    if (string[i] == letter)
+                    {
+                        count++;
+                    }
+                }
+                console.log(count);
+            }
+            let arr = ['hello', 'l'];
+            //let arr = ['panther', 'n']
+            countLetterInString(arr);
+            */
+
+            /*
+            function filterByAge(arr)
+            {
+                let minAge = Number(arr[0]);
+                let person1 = {name: arr[1], age: Number(arr[2])};
+                let person2 = {name: arr[3], age: Number(arr[4])};
+                if (person1.age >= minAge)
+                {
+                    console.log(person1);
+                }
+                if (person2.age >= minAge)
+                {
+                    console.log(person2);
+                }
+            }
+            let arr = ['12', 'John', '15', 'Alfred', '9'];
+            filterByAge(arr);
+            */
+
+            /*
+            function printNumbers(arr)
+            {
+                let n = Number(arr[0]);
+                let result = '';
+                for (let i = 1; i <= n; i++)
+                {
+                    result += i;
+                }
+                console.log(result);
+            }
+            let arr = ['11'];
+            printNumbers(arr);
+            */
+
+            /*
+            function calculateArea(arr)
+            {
+                let w = Number(arr[0]);
+                let h = Number(arr[1]);
+                let W = Number(arr[2]);
+                let H = Number(arr[3]);
+                let area1 = w * h;
+                let area2 = W * H;
+                let commonArea = Math.min(w, W) * Math.min(h, H);
+                let area = area1 + area2 - commonArea;
+                console.log(area);
+            }
+            let arr = ['13', '2', '5', '8'];
+            calculateArea(arr);
+            */
+
+            /*
+            function nextDay(arr)
+            {
+                let year = Number(arr[0]);
+                let month = Number(arr[1]);
+                let day = Number(arr[2]);
+                let date = new Date(year, month - 1, day);
+                date.setDate(date.getDate() + 1);
+                console.log(date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate());
+            }
+            let arr = ['2016', '9', '30'];
+            nextDay(arr);
+            */
+
+            //Write a JS function that calculates the distance between two points by given x and y coordinates.
+            //Use objects to store the two points.
+            //The input comes as array of four string elements in the format [x1, y1, x2, y2]that need to be parsed as numbers.
+            //Each pair of elements are the coordinates of a point in 2D space.
+            //The output should be returned as a result of your function.
+            function distanceBetweenPoints(arr)
+            {
+                let x1 = Number(arr[0]);
+                let y1 = Number(arr[1]);
+                let x2 = Number(arr[2]);
+                let y2 = Number(arr[3]);
+                let point1 = {x: x1, y: y1};
+                let point2 = {x: x2, y: y2};
+                let distance = Math.sqrt(Math.pow(point1.x - point2.x, 2) + Math.pow(point1.y - point2.y, 2));
+                console.log(distance);
+            }
+            let arr = ['2', '4', '5', '0'];
+            distanceBetweenPoints(arr);
+            
+
+
         </script>
     </body>
 </html>
