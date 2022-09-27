@@ -9,5 +9,5 @@ function distanceBetweenPoints(arr)
     let distance = Math.sqrt(Math.pow(point1.x - point2.x, 2) + Math.pow(point1.y - point2.y, 2));
     console.log(distance);
 }
-let arr = ['2', '4', '5', '0'];
+let arr = ['2.34','15.66','-13.55','-2.9985'];
 distanceBetweenPoints(arr);
