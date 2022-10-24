@@ -68,6 +68,7 @@ print(Busdriver().driving())
 # In this lab you have one person in a band that wants to play some instruments.
 # Create one function and name it play_instrument( ) which will receive an instance of an instrument and will print its play () method.
 # Note: You need to create separate files for each class as well.
+'''
 import drums
 import synth
 
@@ -79,3 +80,16 @@ drums = drums.Drums()
 
 play_instrument(drums)
 play_instrument(synth)
+'''
+
+# You are given this code:
+
+def even_numbers(numbers):
+    def wrap(numbers):
+        # your code here
+        
+        return numbers
+    return wrap
+
+even_numberss = even_numbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+print(even_numberss)
