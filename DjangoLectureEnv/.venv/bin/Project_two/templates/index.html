@@ -1,0 +1,34 @@
+/*
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Second application</title>
+    </head>
+    <body>
+        <h1>Hello, this is index file. It is rendered from first_app.views.index()</h1>
+        {{insert_me}}
+    </body>
+</html>
+
+# tag use for simple text injection
+{{templates_tag}}
+
+*/
+
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Django</title>
+    </head>
+    <body>
+        <h1>Hello, this is the picture of Django</h1>
+        <img src="{% static "images/django.png" %}" alt="Oh no, did not show!">
+    </body>
+</html>
+
+
+
