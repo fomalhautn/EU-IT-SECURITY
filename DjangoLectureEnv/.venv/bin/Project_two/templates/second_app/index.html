@@ -1,4 +1,4 @@
-/*
+<!--
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,8 +14,8 @@
 
 # tag use for simple text injection
 {{templates_tag}}
+//-->
 
-*/
 
 <!DOCTYPE html>
 {% load staticfiles %}
@@ -23,6 +23,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Django</title>
+        <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
     </head>
     <body>
         <h1>Hello, this is the picture of Django</h1>
