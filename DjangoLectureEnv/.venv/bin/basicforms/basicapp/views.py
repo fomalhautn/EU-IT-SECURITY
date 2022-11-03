@@ -1,5 +1,10 @@
 from django.shortcuts import render
 from . import forms
+
+# Create your views here.
+from django.http import HttpResponse
+
+from basicapp.models import User
 # Create your views here.
 
 def index(request):
@@ -13,9 +18,11 @@ def form_name_view(request):
 
         if form.is_valid():
             # do something
-            print("Validation Success!")
-            print("Name: " + form.cleaned_data['name'])
-            print("Email: " + form.cleaned_data['email'])
-            print("Text: " + form.cleaned_data['text'])
+            form_name = form.cleaned_data['name']
+            form_email = form.cleaned_data['email']
+            form_text = form.cleaned_data['text']
+            u = User(name=form_name, email=form_email, text=form_text)
+            u.save()
 
     return render(request, 'basicapp/form_page.html', {'form':form})
+

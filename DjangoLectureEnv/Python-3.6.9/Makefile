@@ -186,7 +186,7 @@ OTHER_LIBTOOL_OPT=
 RUNSHARED=       LD_LIBRARY_PATH=/workspaces/IT-SECURITY/DjangoLectureEnv/Python-3.6.9
 
 # ensurepip options
-ENSUREPIP=      install
+ENSUREPIP=      upgrade
 
 # Modes for directories, executables and data files created by the
 # install process.  Default to user-only-writable for all file types.
@@ -195,7 +195,7 @@ EXEMODE=	755
 FILEMODE=	644
 
 # configure script arguments
-CONFIG_ARGS=	 '--enable-optimizations' '--enable-shared' '--with-ensurepip=install'
+CONFIG_ARGS=	 '--enable-optimizations' '--enable-shared'
 
 
 # Subdirectories with code
@@ -236,8 +236,8 @@ LIBOBJS=
 PYTHON=		python$(EXE)
 BUILDPYTHON=	python$(BUILDEXE)
 
-PYTHON_FOR_REGEN=python3
-UPDATE_FILE=python3 $(srcdir)/Tools/scripts/update_file.py
+PYTHON_FOR_REGEN=python3.6
+UPDATE_FILE=python3.6 $(srcdir)/Tools/scripts/update_file.py
 PYTHON_FOR_BUILD=./$(BUILDPYTHON) -E
 _PYTHON_HOST_PLATFORM=
 BUILD_GNU_TYPE=	x86_64-pc-linux-gnu
