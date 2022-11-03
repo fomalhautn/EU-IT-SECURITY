@@ -14,7 +14,7 @@
 
 # tag use for simple text injection
 {{templates_tag}}
-//-->
+
 
 
 <!DOCTYPE html>
@@ -26,10 +26,63 @@
         <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
     </head>
     <body>
-        <h1>Hello, this is the picture of Django</h1>
-        <img src="{% static "images/django.png" %}" alt="Oh no, did not show!">
+
+        <h1>Hi and Welcome!</h1>
+        <h1>Here is your access records:</h1> 
+        <div>
+            {% if AccessRecord %}
+            <table>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                </tr>
+                {% for column in data %}
+                <tr>
+                    <td>{{column.name.category}}</td>
+                    <td>{{column.name}}</td>
+                    <td>{{column.name.url}}</td>
+                    <td>{{column.date}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
     </body>
 </html>
+//-->
 
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Django</title>
+        <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+    </head>
+    <body>
 
+        <h1>Hi and Welcome!</h1>
+        <h1>Here is your access records:</h1> 
+        <div>
+            {% if AccessRecord %}
+            <table>
+                <thead>
+                    <th>Site name</th>
+                    <th>Data Accessed</th>
+                </thead>
+            {% for acc in AccessRecord %}
+                <tr>
+                    <td>{{column.name.category}}</td>
+                    <td>{{column.name}}</td>
+                    <td>{{column.name.url}}</td>
+                    <td>{{column.date}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% else %}
+            <p> No access records found</p>
+            {% endif %}
 
+        </div>
+    </body>
+</html>
