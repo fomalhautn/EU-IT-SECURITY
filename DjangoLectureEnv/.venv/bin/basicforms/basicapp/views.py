@@ -24,5 +24,5 @@ def form_name_view(request):
             u = User(name=form_name, email=form_email, text=form_text)
             u.save()
 
-    return render(request, 'basicapp/form_page.html', {'form':form})
+    return render(request, 'basicapp/signup.html', {'form':form})
 
